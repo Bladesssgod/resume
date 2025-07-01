@@ -11,7 +11,7 @@
 
 /* обо мне */
 .about1 h5 {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 350;
     padding: 0px;
     color: #8d97a6;
@@ -25,16 +25,16 @@
 
 .left-side {
   width: 800px; /* Ширина фиксированной панели */
-  padding: 40px;
+  padding-top: 80px;
+  padding-left: 400px ;
   position: fixed;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid #eaeaea;
 }
 
 .right-side {
-    padding: 50px 350px 0px 10px;
+    padding: 80px 350px 0px 30px;
   flex: 1;
   margin-left: 900px; /* Отступ равный ширине левой панели */
   height: 100vh;
@@ -42,6 +42,7 @@
 }
 /* первый раздел с навыками */
 .experience-item {
+    padding-top: 50px;
   display: flex;
   gap: 30px;
   margin-bottom: 40px;
@@ -114,34 +115,6 @@
   font-size: 0.8rem;
   color: #00d1d1;
 }
-
-/*  курсор */
-.custom-cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  background-color: rgba(78, 84, 200, 0.2); /* Полупрозрачный синий */
-  border-radius: 50%;
-  pointer-events: none; /* Чтобы курсор не мешал кликам */
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  mix-blend-mode: multiply; /* Красивый эффект наложения */
-  transition: transform 0.1s ease, width 0.3s ease, height 0.3s ease;
-}
-
-/* Увеличение курсора при наведении на интерактивные элементы */
-a, button, .clickable {
-  cursor: none !important;
-}
-
-a:hover ~ .custom-cursor,
-button:hover ~ .custom-cursor {
-  transform: translate(-50%, -50%) scale(1.5);
-  background-color: rgba(78, 84, 200, 0.4);
-}
-
-
-
 
 
 /* Адаптация для мобильных */
