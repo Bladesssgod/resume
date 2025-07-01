@@ -193,8 +193,39 @@
   height: 100%;
   border-radius: 0;
 }
+/* иконки */
+.social-icons {
+  position: fixed;
+  left: 400px;
+  bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  z-index: 100;
+}
 
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: #2d3748; /* Цвет иконок */
+  transition: fill 0.3s ease, transform 0.3s ease;
+}
 
+.icon:hover {
+  fill: #4e54c8; /* Акцентный цвет при наведении */
+  transform: translateY(-3px);
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+  .social-icons {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+    padding-bottom: 20px;
+  }
+}
 /* Адаптация для мобильных */
 @media (max-width: 768px) {
   .split-layout {
