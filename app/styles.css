@@ -115,32 +115,33 @@
   font-size: 0.8rem;
   color: #00d1d1;
 }
+.experience1 {
+    padding-right: 350px;
+}
+
 /* курсор */
 .cursor {
     z-index: 999;
     position: fixed;
-    background: radial-gradient(   circle at center,
-    rgba(65, 81, 105, 0.25) 0%,    /* Непрозрачный центр */
-    rgba(65, 81, 105,0.05) 90%,
-    rgba(65, 81, 105, 1) 50% 
-    );
-    width: 240px;
-    height: 240px;
+        background: radial-gradient(
+        circle at center,
+        rgba(60, 114, 163, 0.2) 0%,
+        rgba(60, 114, 163, 0) 50%,
+        rgba(60, 114, 163, 0) 100%
+        );
+    width: 2000px;
+    height: 2000px;
     border-radius: 50%;
     pointer-events: none;
-
     transform: translate(-50%, -50%);
 }
-.cursor:before{
-    content: '';
-    position: absolute;
-    background: #5070a1;
-    width: 600px;
-    height: 600px;
-    opacity: 0.05;
-    transform: translate(-30%, -30%);
-    border-radius: 50%;
+
+/* навигация*/
+.main-nav {
+    padding-right:px;
 }
+
+
 
 /* Адаптация для мобильных */
 @media (max-width: 768px) {
