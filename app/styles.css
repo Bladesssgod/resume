@@ -1,0 +1,163 @@
+/* шрифты */
+
+.body {
+    background-color: #0f131f;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #fff;
+}
+
+/* обо мне */
+.about1 h5 {
+    font-size: 15px;
+    font-weight: 350;
+    padding: 0px;
+    color: #8d97a6;
+}
+
+.split-layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.left-side {
+  width: 800px; /* Ширина фиксированной панели */
+  padding: 40px;
+  position: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #eaeaea;
+}
+
+.right-side {
+    padding: 50px 350px 0px 10px;
+  flex: 1;
+  margin-left: 900px; /* Отступ равный ширине левой панели */
+  height: 100vh;
+  overflow-y: auto; /* Включаем скролл только для правой части */
+}
+/* первый раздел с навыками */
+.experience-item {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+.experience-period {
+    font-size: 15px;
+  width: 120px;
+  font-weight: 400;
+  flex-shrink: 0;
+  color: #8d97a6;
+}
+
+.experience-content {
+  flex-grow: 1;
+}
+
+.experience-header h3 {
+    color: #fff;
+  margin: 0 0 5px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.experience-header h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #8d97a6;
+}
+
+.experience-description {
+    color: #8d97a6;
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.experience-description li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.experience-features {
+  display: flex;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.feature {
+    color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.tag {
+
+  background-color: rgba(0, 153, 153, 0.15);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: #00d1d1;
+}
+
+/*  курсор */
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(78, 84, 200, 0.2); /* Полупрозрачный синий */
+  border-radius: 50%;
+  pointer-events: none; /* Чтобы курсор не мешал кликам */
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  mix-blend-mode: multiply; /* Красивый эффект наложения */
+  transition: transform 0.1s ease, width 0.3s ease, height 0.3s ease;
+}
+
+/* Увеличение курсора при наведении на интерактивные элементы */
+a, button, .clickable {
+  cursor: none !important;
+}
+
+a:hover ~ .custom-cursor,
+button:hover ~ .custom-cursor {
+  transform: translate(-50%, -50%) scale(1.5);
+  background-color: rgba(78, 84, 200, 0.4);
+}
+
+
+
+
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+  .split-layout {
+    flex-direction: column;
+  }
+  
+  .left-side {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+  
+  .right-side {
+    margin-left: 0;
+  }
+}
+
