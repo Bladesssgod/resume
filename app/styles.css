@@ -1,6 +1,7 @@
 /* шрифты */
 
 .body {
+    
     background-color: #0f131f;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -20,7 +21,6 @@
 .split-layout {
   display: flex;
   height: 100vh;
-  overflow: hidden;
 }
 
 .left-side {
@@ -37,7 +37,7 @@
     padding: 80px 350px 0px 30px;
   flex: 1;
   margin-left: 900px; /* Отступ равный ширине левой панели */
-  height: 100vh;
+  height: 200vh;
   overflow-y: auto; /* Включаем скролл только для правой части */
 }
 /* первый раздел с навыками */
