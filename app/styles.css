@@ -45,13 +45,18 @@
 }
 /* первый раздел с навыками */
 .experience-item {
-    padding-top: 50px;
+  border-radius: 8px;
+  padding-top: 50px;
+  background: #0f131f;
+  border:1px solid #00d1d1 ;
+  transition: all 0.3s ease;
+  cursor: pointer;
   display: flex;
   gap: 30px;
   margin-bottom: 40px;
   font-family: 'Inter', sans-serif;
-  color: #333;
 }
+
 
 .experience-period {
     font-size: 15px;
@@ -192,6 +197,28 @@
   width: 2px;
   height: 100%;
   border-radius: 0;
+}
+/* иконки */
+.social-icons {
+  position: fixed;
+  left: 400px;
+  bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  z-index: 100;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: #2d3748; /* Цвет иконок */
+  transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.icon:hover {
+  fill: #4e54c8; /* Акцентный цвет при наведении */
+  transform: translateY(-3px);
 }
 
 
