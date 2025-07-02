@@ -9,6 +9,7 @@
   font-style: normal;
   color: #fff;
 }
+.button {text-decoration: none;}
 
 /* обо мне */
 .about1 h5 {
@@ -24,9 +25,9 @@
 }
 
 .left-side {
-  max-width: 800px; /* Ширина фиксированной панели */
+  max-width: 400px; /* Ширина фиксированной панели */
   padding-top: 80px;
-  padding-left: 400px ;
+  padding-left: clamp(0px, 10vw, 400px) ;
   position: fixed;
   height: 100vh;
   display: flex;
@@ -34,7 +35,7 @@
 }
 
 .right-side {
-  padding: 80px 350px 0px 30px;
+  padding: 80px clamp(0px, 30vw, 350px) 0px clamp(5px, 1vw, 30px);
   flex: 1;
   margin-left: 900px; /* Отступ равный ширине левой панели */
   height: 200vh;
@@ -45,10 +46,11 @@
 }
 /* разделы с навыками */
 .experience-item {
+  appearance: none;
   border-radius: 10px;
   padding-top: 50px;
   background: #0f131f;
-  border: 1px solid #5127a0c5 ;
+  border: 1px solid #0f131f ;
   transition: all 0.3s ease;
   cursor: pointer;
   display: flex;
@@ -56,7 +58,25 @@
   margin-bottom: 40px;
   font-family: 'Inter', sans-serif;
 }
+/* hover */
+.experience-item {
+  padding: 20px;
+  border-radius: 8px;
+  background: #0f131f;
+  border: 1px solid #0f131f;
+  transition: all 0.3s ease; /* Плавные анимации */
+  cursor: pointer;
+}
 
+/* Эффекты при наведении */
+.experience-item:hover {
+  background: #171e31; /* Изменение фона */
+  
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.9); /* Тень */
+}
+.experience-item:hover h3 {
+  color: #b289ff; /* Изменение цвета заголовка */
+}
 
 
 
@@ -119,23 +139,19 @@
 
 .tag {
 
-  background-color: rgba(0, 153, 153, 0.15);
+  background-color: rgba(141, 130, 202, 0.158);
   padding: 4px 10px;
   border-radius: 12px;
   font-size: 0.8rem;
-  color: #00d1d1;
+  color: #b296e7;
 }
-.experience1 {
-    padding-right: 350px;
-}
-
 /* курсор */
 .cursor {
     z-index: 999;
     position: fixed;
         background: radial-gradient(
         circle at center,
-        rgba(60, 114, 163, 0.2) 0%,
+        rgba(144, 146, 179, 0.274) 0%,
         rgba(60, 114, 163, 0) 50%,
         rgba(60, 114, 163, 0) 100%
         );
@@ -148,7 +164,7 @@
 
 /* навигация*/
 .vertical-menu {
-    padding-left: 380px;
+    padding-left: clamp(0px,10vw,380px);
     margin-bottom: 20px;
   font-family: 'Inter', sans-serif; /* Шрифт как в оригинале */
   position: fixed;
@@ -203,7 +219,7 @@
 /* иконки */
 .social-icons {
   position: fixed;
-  left: 400px;
+  left: clamp(0px,10vw,400px);
   bottom: 40px;
   display: flex;
   flex-direction: row;
@@ -219,7 +235,7 @@
 }
 
 .icon:hover {
-  fill: #4e54c8; /* Акцентный цвет при наведении */
+  fill: #b296e7; /* Акцентный цвет при наведении */
   transform: translateY(-3px);
 }
 
