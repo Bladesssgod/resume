@@ -43,12 +43,12 @@
   overflow-wrap: break-word; /* Перенос длинных слов */
   word-break: break-word; /* Альтернативный вариант */
 }
-/* первый раздел с навыками */
+/* разделы с навыками */
 .experience-item {
-  border-radius: 8px;
+  border-radius: 10px;
   padding-top: 50px;
   background: #0f131f;
-  border:1px solid #00d1d1 ;
+  border: 1px solid #5127a0c5 ;
   transition: all 0.3s ease;
   cursor: pointer;
   display: flex;
@@ -56,6 +56,8 @@
   margin-bottom: 40px;
   font-family: 'Inter', sans-serif;
 }
+
+
 
 
 .experience-period {
